@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E93-9p-wRX">
+                                <rect key="frame" x="35" y="351" width="41" height="30"/>
+                                <state key="normal" title="rotate"/>
+                                <connections>
+                                    <action selector="rotate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Jc-sV-bgi"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uIt-G4-CiF">
+                                <rect key="frame" x="126" y="29" width="51" height="31"/>
+                                <connections>
+                                    <action selector="autoRotateSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="jVE-7J-uA9"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auto Rotate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yc-mY-nsq">
+                                <rect key="frame" x="20" y="34" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Itf-Mq-ka0">
+                                <rect key="frame" x="20" y="84" width="30" height="30"/>
+                                <state key="normal" title="Left"/>
+                                <connections>
+                                    <action selector="rotateLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wMT-3r-P7r"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6JD-MA-4Bm">
+                                <rect key="frame" x="20" y="130" width="36" height="30"/>
+                                <state key="normal" title="Right"/>
+                                <connections>
+                                    <action selector="rotateRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TmK-Yf-xkT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gye-5U-7yR">
+                                <rect key="frame" x="20" y="222" width="88" height="30"/>
+                                <state key="normal" title="UpsideDown"/>
+                                <connections>
+                                    <action selector="upsideDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wlq-SM-9DH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBi-l2-ry8">
+                                <rect key="frame" x="20" y="176" width="52" height="30"/>
+                                <state key="normal" title="Portrait"/>
+                                <connections>
+                                    <action selector="portrait:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mWF-NV-9ul"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6JD-MA-4Bm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7fM-Vp-BJt"/>
+                            <constraint firstItem="Itf-Mq-ka0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DiJ-LW-5b4"/>
+                            <constraint firstItem="6JD-MA-4Bm" firstAttribute="top" secondItem="Itf-Mq-ka0" secondAttribute="bottom" constant="16" id="FI9-32-1HN"/>
+                            <constraint firstItem="nBi-l2-ry8" firstAttribute="top" secondItem="6JD-MA-4Bm" secondAttribute="bottom" constant="16" id="FQ0-Nu-nlw"/>
+                            <constraint firstItem="0yc-mY-nsq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="TZt-3G-dAg"/>
+                            <constraint firstItem="uIt-G4-CiF" firstAttribute="leading" secondItem="0yc-mY-nsq" secondAttribute="trailing" constant="16" id="YI8-Uj-KT9"/>
+                            <constraint firstItem="gye-5U-7yR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aJ5-ZI-f1d"/>
+                            <constraint firstItem="uIt-G4-CiF" firstAttribute="centerY" secondItem="0yc-mY-nsq" secondAttribute="centerY" id="iyO-aV-McK"/>
+                            <constraint firstItem="gye-5U-7yR" firstAttribute="top" secondItem="nBi-l2-ry8" secondAttribute="bottom" constant="16" id="jAP-LJ-dCM"/>
+                            <constraint firstItem="0yc-mY-nsq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kFn-2o-t3s"/>
+                            <constraint firstItem="Itf-Mq-ka0" firstAttribute="top" secondItem="0yc-mY-nsq" secondAttribute="bottom" constant="29" id="lLJ-uQ-lBb"/>
+                            <constraint firstItem="nBi-l2-ry8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="qel-Cp-iKm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="102" y="302"/>
+        </scene>
+    </scenes>
+</document>
